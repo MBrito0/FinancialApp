@@ -1,0 +1,100 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Contas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Contas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <div class="account-intro">
+     
+    </div>
+
+    <ion-searchbar [(ngModel)]="searchQuery" placeholder="Buscar contas..."></ion-searchbar>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          <h2>Minhas Contas</h2>
+          <p>Visualize todas as suas contas e seus saldos.</p>
+        </ion-label>
+        <ion-button slot="end" routerLink="/my-accounts">Ver</ion-button>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          <h2>Adicionar Nova Conta</h2>
+          <p>Inclua uma nova conta ao seu gerenciamento.</p>
+        </ion-label>
+        <ion-button slot="end" routerLink="/add-account">Adicionar</ion-button>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          <h2>Relatórios de Contas</h2>
+          <p>Acesse relatórios detalhados sobre suas contas.</p>
+        </ion-label>
+        <ion-button slot="end" routerLink="/account-reports">Ver Relatórios</ion-button>
+      </ion-item>
+    </ion-list>
+
+    <div class="account-summary">
+      <h3>Resumo das Contas</h3>
+      <p>Total de Contas: 5</p>
+      <p>Saldo Total: R$ 15.000,00</p>
+      <p>Contas a Pagar: R$ 3.000,00</p>
+    </div>
+
+    <div class="account-alerts">
+      <h3>Alertas de Vencimento</h3>
+      <ion-list>
+        <ion-item>
+          <ion-label>⚠️ Conta de Luz - Vencimento em 3 dias.</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>⚠️ Conta de Internet - Vencimento em 5 dias.</ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div class="account-transactions">
+      <h3>Transações Recentes</h3>
+      <ion-list>
+        <ion-item>
+          <ion-label>Pagamento de Conta de Luz - R$ 200,00</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label>Recebimento Salário - R$ 3.000,00</ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+
+    <div class="account-charts">
+      <h3>Gráficos de Análise de Contas</h3>
+      <p>Visualize a distribuição das contas e saldos.</p>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Distribuição de Saldo</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Gráfico de distribuição de saldo estará aqui.</p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <div class="account-actions">
+      <ion-button expand="full" routerLink="/pay-bills">Pagar Contas</ion-button>
+      <ion-button expand="full" routerLink="/set-reminders">Definir Lembretes</ion-button>
+      <ion-button expand="full" routerLink="/transfer-funds">Transferir entre Contas</ion-button>
+    </div>
+  </ion-content>
+</ion-content>

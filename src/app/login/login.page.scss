@@ -1,0 +1,61 @@
+// Centraliza o conteúdo
+ion-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #0983d4a5;
+  }
+
+  // Estiliza o formulário para ficar responsivo
+  form {
+    width: 100%;
+    max-width: 400px;
+    display: flexbox;
+    margin-top: 60px;
+    padding: 50px;
+    background-color: #ebe8e8; // Fundo branco no formulário
+    border-radius: 20px; // Borda arredondada
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.522); // Sombra suave
+  }
+
+  ion-avatar{
+    margin-left: 100px;
+  }
+
+  // Estilo dos inputs (caixas de email e senha)
+  ion-item {
+    --background: #ffffff;
+    --border-radius: 3px;
+    margin-bottom: 15px;
+    padding: 10px 10px;
+  }
+
+  ion-label {
+    color: #888; // Cor do texto do label
+  }
+
+  ion-input {
+    --padding-start: 0;
+    color: #333; // Cor do texto de entrada
+  }
+
+  // Estiliza os botões
+  ion-button {
+    --border-radius: 8px;
+    --background: #3880ff; // Cor de fundo do botão de login
+    --color: white; // Cor do texto do botão de login
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  ion-button[fill="clear"] {
+    --color: #ffffff; // Cor do botão "Criar Conta"
+    font-weight: normal;
+  }
+
+  ion-toolbar {
+    --background: #3880ff; // Cor de fundo da toolbar (header)
+    --color: white; // Cor do título no header
+  }

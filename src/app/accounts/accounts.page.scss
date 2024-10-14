@@ -1,0 +1,112 @@
+// Estilização geral do conteúdo
+ion-content {
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff); // Degradê suave
+    padding: 20px; // Espaçamento interno
+  }
+
+  ion-toolbar {
+    --background: #115bda; // Cor de fundo da toolbar (header)
+    --color: white; // Cor do título no header
+  }
+  
+  // Estilo para a barra de pesquisa
+  ion-searchbar {
+    margin-bottom: 20px; // Espaçamento inferior
+    --background: #ffffff; // Fundo branco
+    --border-radius: 10px; // Bordas arredondadas
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Sombra suave
+  }
+  
+  // Estilo para a introdução das contas
+  .account-intro {
+    text-align: center; // Centraliza o texto
+    margin-bottom: 20px; // Espaçamento inferior
+    h1 {
+      font-size: 1.8em; // Tamanho da fonte maior
+      color: #0a2eae; // Cor do texto
+    }
+  }
+  
+  // Estilo para a lista de contas
+  ion-list {
+    margin-bottom: 20px; // Espaçamento inferior
+  }
+  
+  // Estilo para os itens da lista
+  ion-item {
+    --background: transparent; // Fundo transparente
+    --border-radius: 8px; // Bordas arredondadas
+    margin-bottom: 15px; // Espaçamento inferior
+    padding: 15px; // Espaçamento interno
+    h2 {
+      font-size: 1.5em; // Tamanho da fonte do título
+      color: #001e79; // Cor do título
+    }
+    p {
+      font-size: 0.9em; // Tamanho da fonte da descrição
+      color: #555; // Cor da descrição
+    }
+  }
+  
+  // Estilo dos botões nos itens da lista
+  ion-button {
+    --background: #083399; // Cor de fundo do botão
+    --color: white; // Cor do texto do botão
+    --border-radius: 20px; // Bordas arredondadas
+  }
+  
+  // Estilo da seção de resumo das contas
+  .account-summary {
+    background-color: #ffffff; // Fundo branco
+    border-radius: 12px; // Bordas arredondadas
+    padding: 15px; // Espaçamento interno
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Sombra suave
+    margin-bottom: 20px; // Espaçamento inferior
+    h3 {
+      font-size: 1.5em; // Tamanho da fonte
+      color: #072799; // Cor do título
+    }
+  }
+  
+  // Estilo da seção de alertas
+  .account-alerts {
+    margin-bottom: 20px; // Espaçamento inferior
+    h3 {
+      font-size: 1.5em; // Tamanho da fonte
+      color: #d32f2f; // Cor do título de alerta
+    }
+  }
+  
+  // Estilo da seção de transações
+  .account-transactions {
+    margin-bottom: 20px; // Espaçamento inferior
+    h3 {
+      font-size: 1.5em; // Tamanho da fonte
+      color: #001079; // Cor do título
+    }
+  }
+  
+  // Estilo da seção de gráficos
+  .account-charts {
+    margin-bottom: 20px; // Espaçamento inferior
+    h3 {
+      font-size: 1.5em; // Tamanho da fonte
+      color: #0909a2; // Cor do título
+    }
+  }
+  
+  // Estilo dos gráficos
+  ion-card {
+    background-color: #ffffff; // Fundo branco para o cartão
+    border-radius: 12px; // Bordas arredondadas
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); // Sombra suave
+  }
+  
+  // Estilo das ações
+  .account-actions {
+    ion-button {
+      margin-top: 10px; // Margem superior para os botões
+      --border-radius: 20px; // Bordas arredondadas para botões
+    }
+  }
+  

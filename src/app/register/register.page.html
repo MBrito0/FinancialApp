@@ -1,0 +1,55 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="#"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Cadastro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+  <ion-content>
+    <form (ngSubmit)="onRegister()">
+      <ion-item>
+        <ion-label position="floating">Nome Completo</ion-label>
+        <ion-input type="text" required [(ngModel)]="fullName" name="fullName"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" required [(ngModel)]="email" name="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Senha</ion-label>
+        <ion-input type="password" required [(ngModel)]="password" name="password"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Confirmação de Senha</ion-label>
+        <ion-input type="password" required [(ngModel)]="confirmPassword" name="confirmPassword"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Data de Nascimento</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="dateOfBirth" name="dateOfBirth" required></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Gênero</ion-label>
+        <ion-select [(ngModel)]="gender" name="gender" required>
+          <ion-select-option value="male">Masculino</ion-select-option>
+          <ion-select-option value="female">Feminino</ion-select-option>
+          <ion-select-option value="other">Outro</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Termos e Condições</ion-label>
+        <ion-checkbox [(ngModel)]="termsAccepted" name="termsAccepted" required></ion-checkbox>
+      </ion-item>
+
+      <ion-button expand="full" type="submit">Cadastrar</ion-button>
+    </form>
+  </ion-content>
+

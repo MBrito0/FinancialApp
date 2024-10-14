@@ -1,0 +1,20 @@
+.support-content {
+    padding: 16px;
+    background-color: #f9f9f9; /* Cor de fundo clara */
+  }
+  
+  .support-button {
+    background-color: #3880ff; /* Cor do botão */
+    color: white;
+    transition: background-color 0.3s ease; /* Transição suave */
+  }
+  
+  .support-button:hover {
+    background-color: #007aff; /* Cor ao passar o mouse */
+  }
+  
+  ion-list {
+    --ion-item-background: transparent; /* Fundo transparente para o item */
+    --ion-item-border-color: #e0e0e0; /* Cor da borda */
+  }
+  

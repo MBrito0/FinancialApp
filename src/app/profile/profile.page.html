@@ -1,0 +1,51 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>  <!-- Botão para abrir o menu -->
+    </ion-buttons>
+    <ion-title>Perfil</ion-title>  <!-- Título da página -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Perfil</ion-title>  <!-- Título maior ao colapsar -->
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <div class="profile-header">
+      <h2>{{ fullName }}</h2>
+      <p>{{ email }}</p>
+    </div>
+
+    <ion-list>
+      <ion-item>
+        <ion-label position="floating">Nome Completo</ion-label>
+        <ion-input type="text" [(ngModel)]="fullName" name="fullName"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" [(ngModel)]="email" name="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Data de Nascimento</ion-label>
+        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="dateOfBirth" name="dateOfBirth"></ion-datetime>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Gênero</ion-label>
+        <ion-select [(ngModel)]="gender" name="gender">
+          <ion-select-option value="male">Masculino</ion-select-option>
+          <ion-select-option value="female">Feminino</ion-select-option>
+          <ion-select-option value="other">Outro</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-button expand="full" (click)="saveProfile()">Salvar Alterações</ion-button>
+  </ion-content>
+</ion-content>

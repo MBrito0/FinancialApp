@@ -1,0 +1,111 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Relatórios</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Relatórios</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <div class="report-intro">
+      <p>Escolha uma das opções abaixo para começar:</p>
+    </div>
+
+    <ion-list>
+      <ion-item>
+        <ion-label>
+          <h2>Relatório Mensal</h2>
+          <p>Visualize os relatórios financeiros do mês atual.</p>
+        </ion-label>
+        <ion-button slot="end" routerLink="/monthly-report">Ver</ion-button>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          <h2>Relatório Anual</h2>
+          <p>Veja um resumo dos relatórios do ano.</p>
+        </ion-label>
+        <ion-button slot="end" routerLink="/annual-report">Ver</ion-button>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>
+          <h2>Relatório Personalizado</h2>
+          <p>Gere relatórios com base em suas necessidades específicas.</p>
+        </ion-label>
+        <ion-button slot="end" routerLink="/custom-report">Gerar</ion-button>
+      </ion-item>
+    </ion-list>
+
+    <div class="report-filters">
+      <h3>Filtros de Data</h3>
+      <ion-item>
+        <ion-label>Data Inicial</ion-label>
+        <ion-datetime display-format="MM/DD/YYYY" [(ngModel)]="startDate"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label>Data Final</ion-label>
+        <ion-datetime display-format="MM/DD/YYYY" [(ngModel)]="endDate"></ion-datetime>
+      </ion-item>
+      <ion-button expand="full" (click)="applyFilters()">Aplicar Filtros</ion-button>
+    </div>
+
+    <div class="report-summary">
+      <h3>Resumo Financeiro</h3>
+      <p>Total de Receitas: R$ 50.000,00</p>
+      <p>Total de Despesas: R$ 30.000,00</p>
+      <p>Lucro Líquido: R$ 20.000,00</p>
+    </div>
+
+    <div class="report-charts">
+      <h3>Gráficos de Desempenho</h3>
+      <p>Visualize os gráficos abaixo para entender melhor o desempenho financeiro:</p>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Receitas e Despesas</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <!-- Aqui você pode integrar um gráfico -->
+          <p>Gráfico de receitas e despesas estará aqui.</p>
+        </ion-card-content>
+      </ion-card>
+
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Análise de Categorias</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>Gráfico de análise de categorias estará aqui.</p>
+        </ion-card-content>
+      </ion-card>
+    </div>
+
+    <div class="report-tips">
+      <h3>Dicas e Recomendações</h3>
+      <p>Baseado nos seus relatórios, tente:</p>
+      <ul>
+        <li>Reduzir gastos com alimentação fora de casa.</li>
+        <li>Aumentar o valor das suas economias mensais.</li>
+      </ul>
+    </div>
+
+    <div class="report-goals">
+      <h3>Metas Financeiras</h3>
+      <p>Você está 75% perto de atingir sua meta de economia para este mês!</p>
+    </div>
+
+    <div class="report-actions">
+      <ion-button expand="full" routerLink="/export-report">Exportar Relatório</ion-button>
+      <ion-button expand="full" routerLink="/report-history">Histórico de Relatórios</ion-button>
+      <ion-button expand="full" routerLink="/create-report">Criar Novo Relatório</ion-button>
+    </div>
+  </ion-content>
+</ion-content>

@@ -1,0 +1,76 @@
+// Estilização geral do conteúdo
+ion-content {
+    background: linear-gradient(to bottom, #e0f7fa, #ffffff); // Degradê suave
+    padding: 20px; // Espaçamento interno
+  }
+
+  ion-toolbar {
+    --background: #115bda; // Cor de fundo da toolbar (header)
+    --color: white; // Cor do título no header
+  }
+  
+  // Estilo para os cartões
+  ion-card {
+    background-color: #cac8c8bd; // Fundo branco para os cartões
+    border-radius: 12px; // Bordas arredondadas
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Sombra suave
+    margin-bottom: 20px; // Espaçamento entre os cartões
+  }
+  
+  // Estilo do cabeçalho dos cartões
+  ion-card-header {
+    background-color: #0c26e9; // Cor do cabeçalho dos cartões
+    color: rgb(214, 214, 214); // Texto branco
+    border-top-left-radius: 12px; // Arredondar o canto superior esquerdo
+    border-top-right-radius: 12px; // Arredondar o canto superior direito
+  }
+  
+  // Estilo para os títulos dos cartões
+  ion-card-title {
+    font-size: 1.5em; // Tamanho da fonte maior
+    font-weight: bold; // Negrito
+  }
+  
+  // Estilo dos itens do cartão
+  ion-item {
+    --background: transparent; // Fundo transparente para itens
+    --border-radius: 8px; // Bordas arredondadas para itens
+    margin-bottom: 10px; // Espaçamento inferior
+  }
+  
+  // Estilo das notas
+  ion-note {
+    color: #000000; // Cor das notas
+    font-weight: bold; // Negrito
+  }
+  
+  // Estilo para a barra de progresso
+  ion-progress-bar {
+    --background: #e0e0e0; // Fundo da barra de progresso
+    --progress-background: #008d1a; // Cor da barra de progresso
+    height: 10px; // Altura da barra
+  }
+  
+  // Estilo do botão
+  ion-button {
+    --border-radius: 20px; // Bordas arredondadas para botões
+    --background: #083399; // Cor de fundo do botão
+    --color: white; // Cor do texto do botão
+    margin-top: 10px; // Margem superior para os botões
+  }
+  
+  // Estilo do botão ao passar o mouse
+  ion-button:hover {
+    --background: #0015ff; // Cor mais escura ao passar o mouse
+  }
+  
+  // Estilo para as dicas financeiras e alertas
+  ion-list {
+    padding-left: 10px; // Ajuste de espaçamento para listas
+  }
+  
+  // Estilo para ícones em alertas
+  ion-label {
+    font-size: 1em; // Tamanho da fonte padrão
+  }
+  
