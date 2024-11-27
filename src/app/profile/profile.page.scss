@@ -1,38 +1,82 @@
 .profile-content {
-    padding: 16px;
-    background-color: #f9f9f9; /* Cor de fundo clara */
-  }
-  
-  .profile-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .profile-avatar {
-    width: 100px;
-    height: 100px;
-    margin: 0 auto 10px; /* Centraliza o avatar */
-  }
-  
+  padding: 16px;
+}
+
+.profile-header {
+  text-align: center;
+  margin-bottom: 10px;
+
   .profile-name {
-    font-size: 24px;
+    font-size: 16px; /* Aumentando o tamanho do nome */
     font-weight: bold;
-    margin: 5px 0;
+    color: #333; /* Cor escura para o nome */
   }
-  
+
   .profile-email {
     font-size: 16px;
     color: #666; /* Cor do texto do email */
+    margin-top: 4px; /* Espaço entre o nome e o email */
   }
-  
-  .profile-description {
-    font-size: 14px;
-    color: #444;
-    text-align: center;
-    margin-bottom: 20px;
+}
+
+ion-list {
+  margin-top: 10px;
+
+  ion-item {
+    --background: #cecdcd; /* Fundo branco para os itens */
+    border: 1px solid #a2a3a4; /* Borda sutil */
+    border-radius: 8px; /* Bordas arredondadas */
+    margin-bottom: 10px; /* Espaço entre os itens */
   }
-  
-  .save-button {
-    margin-top: 20px; /* Espaço superior no botão */
+
+  ion-label {
+    color: #495057; /* Cor do texto do rótulo */
+    margin-bottom: 8px;
   }
-  
+
+  ion-input,
+  ion-datetime,
+  ion-select {
+    color: #333; /* Cor do texto dentro dos campos */
+    --border-radius: 8px;
+    margin-bottom: 5px;
+    // --placeholder-color: #aaa;
+
+    &::placeholder {
+      color: #aaa; /* Cor do placeholder */
+      margin-top: 15px;
+    }
+  }
+}
+
+.save-button {
+  margin-top: 20px; /* Espaço superior no botão */
+  --background: #007bff; /* Cor de fundo do botão */
+  --color: #ffffff; /* Cor do texto do botão */
+  border-radius: 8px; /* Bordas arredondadas no botão */
+
+  &:hover {
+    --background: #0056b3; /* Cor mais escura ao passar o mouse */
+  }
+}
+
+/* Campos inválidos */
+ion-item.invalid ion-input {
+  border: 1px solid red; /* Destaca bordas em vermelho */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .profile-content {
+    padding: 8px; /* Reduz o padding em telas menores */
+  }
+
+  .profile-header .profile-name {
+    font-size: 24px; /* Ajusta o tamanho do texto */
+  }
+}
+
+/* Transições suaves */
+.save-button {
+  transition: background-color 0.3s ease;
+}

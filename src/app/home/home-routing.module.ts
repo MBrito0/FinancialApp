@@ -12,12 +12,20 @@ const routes: Routes = [
         loadChildren: () => import('../dashboard/dashboard.module').then(m => m.DashboardPageModule)
       },
       {
-        path: 'reports',
-        loadChildren: () => import('../reports/reports.module').then(m => m.ReportsPageModule)
+        path: 'metas',
+        loadChildren: () => import('../metas/metas.module').then(m => m.MetasPageModule)
       },
       {
-        path: 'accounts',
-        loadChildren: () => import('../accounts/accounts.module').then(m => m.AccountsPageModule)
+        path: 'investimentos',
+        loadChildren: () => import('../investimentos/investimentos.module').then(m => m.InvestimentosPageModule)
+      },
+      {
+        path: 'transacoes',
+        loadChildren: () => import('../transacoes/transacoes.module').then(m => m.TransacoesPageModule)
+      },
+      {
+        path: 'bot',
+        loadChildren: () => import('../bot/bot.module').then(m => m.BotPageModule)
       },
       {
         path: '',

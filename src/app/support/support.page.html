@@ -14,28 +14,22 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
-   
+  <div class="support-content">
     <ion-list>
       <ion-item>
         <ion-label>FAQ</ion-label>
-        <ion-button slot="end" (click)="openFAQ()">Ver</ion-button>
+        <ion-button class="support-button" slot="end" (click)="openFAQ()">Ver</ion-button>
       </ion-item>
 
       <ion-item>
         <ion-label>Contato por E-mail</ion-label>
-        <ion-button slot="end" (click)="sendEmail()">Enviar</ion-button>
-      </ion-item>
-
-      <ion-item>
-        <ion-label>Suporte via Chat</ion-label>
-        <ion-button slot="end" (click)="openChat()">Iniciar Chat</ion-button>
+        <ion-button class="support-button" slot="end" (click)="sendEmail()">Enviar</ion-button>
       </ion-item>
 
       <ion-item>
         <ion-label>Redes Sociais</ion-label>
-        <ion-button slot="end" (click)="openSocialMedia()">Ver</ion-button>
+        <ion-button class="support-button" slot="end" (click)="openSocialMedia()">Ver</ion-button>
       </ion-item>
     </ion-list>
-  </ion-content>
+  </div>
 </ion-content>

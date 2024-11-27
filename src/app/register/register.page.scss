@@ -1,0 +1,115 @@
+// Estilização do header
+ion-toolbar {
+  --background: #3a86ff;
+  --color: white;
+}
+
+ion-title {
+  text-align: center;
+  margin-right: 50px;
+}
+
+// Estilo do formulário e do conteúdo
+form {
+  max-width: 390px;
+  margin: 15px auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  // border-radius: 10px;
+  // box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+// Inputs
+ion-input,
+ion-datetime,
+ion-select {
+  color: #333;
+  --border-radius: 8px;
+  margin-bottom: 15px;
+  --placeholder-color: #aaa;
+  --background: #f9f9f9; /* Fundo para destacar o input */
+}
+
+// Estilo para campo inválido
+ion-input.ng-invalid.ng-touched,
+ion-select.ng-invalid.ng-touched,
+ion-datetime.ng-invalid.ng-touched {
+  border-color: #ff0066;
+}
+
+// Input com ícones alinhados
+ion-input {
+  padding-left: 10px;
+}
+
+// Seleção de data
+ion-datetime {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+// Botão de cadastro com hover e active
+ion-button {
+  --border-radius: 10px;
+  background-color: #0077ff;
+  color: white;
+  margin: 20px 0;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+ion-button:hover {
+  background-color: #ff3399;
+}
+
+ion-button:active {
+  background-color: #1c0d69;
+  transform: scale(0.98); /* Pequeno efeito de clique */
+
+}
+
+// Checkbox de termos e condições
+ion-checkbox {
+  margin-right: 10px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+// Estilo do texto ao lado do checkbox
+.checkbox-container label {
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+// Feedback para validação
+.checkbox-container ion-checkbox:focus-visible {
+  outline: 2px solid #3a86ff;
+}
+
+// Responsividade para telas menores
+@media (max-width: 480px) {
+  form {
+    padding: 15px;
+  }
+
+  ion-input,
+  ion-datetime,
+  ion-select {
+    font-size: 14px;
+  }
+
+  ion-button {
+    font-size: 14px;
+  }
+
+  .checkbox-container {
+    font-size: 0.8rem;
+  }
+}

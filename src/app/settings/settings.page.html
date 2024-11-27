@@ -14,8 +14,8 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
-    <p>Aqui você pode ajustar suas preferências e configurações do aplicativo.</p>
+  <div class="settings-content">
+    <p class="settings-description">Aqui você pode ajustar suas preferências e configurações do aplicativo.</p>
 
     <ion-list>
       <ion-item>
@@ -39,16 +39,15 @@
 
       <ion-item>
         <ion-label>Limpar Cache</ion-label>
-        <ion-button slot="end" (click)="clearCache()">Limpar</ion-button>
+        <ion-button class="action-button" slot="end" (click)="clearCache()">Limpar</ion-button>
       </ion-item>
 
       <ion-item>
         <ion-label>Sobre o App</ion-label>
-        <ion-button slot="end" (click)="showAbout()">Ver</ion-button>
+        <ion-button class="action-button" slot="end" (click)="showAbout()">Ver</ion-button>
       </ion-item>
     </ion-list>
 
-    <ion-button expand="full" (click)="saveSettings()">Salvar Configurações</ion-button>
-  </ion-content>
-</ion-content> 
- 
+    <ion-button class="save-button" expand="full" (click)="saveSettings()">Salvar Configurações</ion-button>
+  </div>
+</ion-content>

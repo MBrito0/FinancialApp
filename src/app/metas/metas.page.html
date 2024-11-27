@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Metas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label position="floating">Nome da Meta</ion-label>
+      <ion-input [(ngModel)]="novaMeta.nome"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Valor Alvo (R$)</ion-label>
+      <ion-input type="number" [(ngModel)]="novaMeta.valor"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Prazo</ion-label>
+      <ion-select [(ngModel)]="novaMeta.prazo">
+        <ion-select-option value="diario">Diário</ion-select-option>
+        <ion-select-option value="semanal">Semanal</ion-select-option>
+        <ion-select-option value="mensal">Mensal</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-button expand="block" (click)="adicionarMeta()">Salvar Meta</ion-button>
+  </ion-list>
+
+  <ion-list>
+    <ion-item *ngFor="let meta of metas">
+      <ion-label>
+        <h2>{{ meta.nome }}</h2>
+        <p>Valor Alvo: R$ {{ meta.valor }}</p>
+        <p>Prazo: {{ meta.prazo }}</p>
+      </ion-label>
+      <ion-button color="danger" slot="end" (click)="removerMeta(meta)">Excluir</ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>

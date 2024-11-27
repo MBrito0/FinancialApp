@@ -10,6 +10,17 @@
 <ion-content>
   <ion-card>
     <ion-card-header>
+      <ion-card-title>Comparação Anual</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label>Gráfico Comparativo de Receitas e Despesas</ion-label>
+      <canvas id="annualComparisonChart"></canvas> <!-- Adicionado o canvas -->
+    </ion-card-content>
+  </ion-card>
+  
+
+  <ion-card>
+    <ion-card-header>
       <ion-card-title>Saldos Gerais</ion-card-title>
     </ion-card-header>
     <ion-card-content>
@@ -40,18 +51,6 @@
       <ion-item>
         <ion-label>Despesas do Mês</ion-label>
         <ion-note slot="end">$800</ion-note>
-      </ion-item>
-    </ion-card-content>
-  </ion-card>
-
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Comparação Anual</ion-card-title>
-    </ion-card-header>
-    <ion-card-content>
-      <ion-label>Gráfico Comparativo de Receitas e Despesas</ion-label>
-      <ion-item>
-        <ion-note slot="end">Gráfico vai aqui</ion-note>
       </ion-item>
     </ion-card-content>
   </ion-card>
@@ -108,7 +107,7 @@
     </ion-card-header>
     <ion-card-content>
       <ion-list>
-        <ion-item>
+        <ion-item> 
           <ion-label>⚠️ Alerta: Saldo abaixo de $1,000!</ion-label>
         </ion-item>
         <ion-item>

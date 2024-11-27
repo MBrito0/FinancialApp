@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'bemvindo',
     pathMatch: 'full'
   },
   {
@@ -34,6 +34,30 @@ const routes: Routes = [
   {
     path: 'tabs',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'reset-password',
+    loadChildren: () => import('./reset-password/reset-password.module').then( m => m.ResetPasswordPageModule)
+  },
+  {
+    path: 'bemvindo',
+    loadChildren: () => import('./bemvindo/bemvindo.module').then( m => m.BemvindoPageModule)
+  },
+  {
+    path: 'metas',
+    loadChildren: () => import('./metas/metas.module').then( m => m.MetasPageModule)
+  },
+  {
+    path: 'transacoes',
+    loadChildren: () => import('./transacoes/transacoes.module').then( m => m.TransacoesPageModule)
+  },
+  {
+    path: 'investimentos',
+    loadChildren: () => import('./investimentos/investimentos.module').then( m => m.InvestimentosPageModule)
+  },
+  {
+    path: 'bot',
+    loadChildren: () => import('./bot/bot.module').then( m => m.BotPageModule)
   }
 ];
 

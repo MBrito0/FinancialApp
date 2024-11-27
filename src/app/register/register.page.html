@@ -1,55 +1,124 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button default-href="#"></ion-back-button>
+      <ion-back-button default-href="#login" >
+      </ion-back-button>
+      <ion-title>Cadastro</ion-title>
     </ion-buttons>
-    <ion-title>Cadastro</ion-title>
   </ion-toolbar>
 </ion-header>
 
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Cadastro</ion-title>
+    </ion-toolbar>
+  </ion-header>
 
-  <ion-content>
-    <form (ngSubmit)="onRegister()">
-      <ion-item>
-        <ion-label position="floating">Nome Completo</ion-label>
-        <ion-input type="text" required [(ngModel)]="fullName" name="fullName"></ion-input>
-      </ion-item>
+  <form (ngSubmit)="onRegister()">
 
-      <ion-item>
-        <ion-label position="floating">Email</ion-label>
-        <ion-input type="email" required [(ngModel)]="email" name="email"></ion-input>
-      </ion-item>
+    <!-- Nome completo -->
+    <ion-item>
+      <ion-input
+        type="text"
+        required
+        [(ngModel)]="fullName"
+        name="fullName"
+        label="Nome Completo"
+        label-placement="floating"
+        fill="solid"
+        placeholder="Digite seu nome completo">
+      </ion-input>
+    </ion-item>
 
-      <ion-item>
-        <ion-label position="floating">Senha</ion-label>
-        <ion-input type="password" required [(ngModel)]="password" name="password"></ion-input>
-      </ion-item>
+    <!-- Data de Nascimento -->
+    <ion-item>
+      <ion-input
+        type="date"
+        required
+        [(ngModel)]="dateOfBirth"
+        name="dateOfBirth"
+        label="Data de Nascimento"
+        label-placement="floating"
+        fill="solid">
+      </ion-input>
+    </ion-item>
 
-      <ion-item>
-        <ion-label position="floating">Confirmação de Senha</ion-label>
-        <ion-input type="password" required [(ngModel)]="confirmPassword" name="confirmPassword"></ion-input>
-      </ion-item>
+    <!-- Gênero -->
+    <ion-item>
+      <ion-select
+        required
+        [(ngModel)]="gender"
+        name="gender"
+        label="Gênero"
+        label-placement="floating"
+        fill="solid">
+        <ion-select-option value="feminino">Feminino</ion-select-option>
+        <ion-select-option value="masculino">Masculino</ion-select-option>
+        <ion-select-option value="outros">Outros</ion-select-option>
+      </ion-select>
+    </ion-item>
 
-      <ion-item>
-        <ion-label position="floating">Data de Nascimento</ion-label>
-        <ion-datetime displayFormat="MM/DD/YYYY" [(ngModel)]="dateOfBirth" name="dateOfBirth" required></ion-datetime>
-      </ion-item>
+    <!-- E-mail -->
+    <ion-item>
+      <ion-input
+        type="email"
+        required
+        [(ngModel)]="email"
+        name="email"
+        label="E-mail"
+        label-placement="floating"
+        fill="solid"
+        placeholder="Digite seu e-mail">
+      </ion-input>
+    </ion-item>
 
-      <ion-item>
-        <ion-label>Gênero</ion-label>
-        <ion-select [(ngModel)]="gender" name="gender" required>
-          <ion-select-option value="male">Masculino</ion-select-option>
-          <ion-select-option value="female">Feminino</ion-select-option>
-          <ion-select-option value="other">Outro</ion-select-option>
-        </ion-select>
-      </ion-item>
+    <!-- Senha -->
+    <ion-item>
+      <ion-input
+        type="password"
+        required
+        [(ngModel)]="password"
+        name="password"
+        label="Senha"
+        label-placement="floating"
+        fill="solid"
+        placeholder="Digite sua senha"
+        pattern="^[a-zA-Z0-9]{1,6}$">
+      </ion-input>
+      <ion-note slot="error" color="danger" *ngIf="password && !password.match('^[a-zA-Z0-9]{1,6}$')">
+        A senha deve ter até 6 caracteres e conter apenas letras e números.
+      </ion-note>
+    </ion-item>
 
-      <ion-item>
-        <ion-label>Termos e Condições</ion-label>
-        <ion-checkbox [(ngModel)]="termsAccepted" name="termsAccepted" required></ion-checkbox>
-      </ion-item>
+    <!-- Confirmar Senha -->
+    <ion-item>
+      <ion-input
+        type="password"
+        required
+        [(ngModel)]="confirmPassword"
+        name="confirmPassword"
+        label="Confirmar Senha"
+        label-placement="floating"
+        fill="solid"
+        placeholder="Confirme sua senha">
+      </ion-input>
+    </ion-item>
 
-      <ion-button expand="full" type="submit">Cadastrar</ion-button>
-    </form>
-  </ion-content>
+    <!-- Checkbox para aceitar termos -->
+    <ion-item>
+      <ion-checkbox
+        slot="start"
+        [(ngModel)]="termsAccepted"
+        name="termsAccepted"
+        required>
+      </ion-checkbox>
+      <ion-label>Eu concordo com os termos e condições</ion-label>
+    </ion-item>
 
+    <!-- Botão de Submissão -->
+    <ion-button expand="full" type="submit" [disabled]="loading">Cadastrar-se</ion-button>
+
+  </form>
+
+</ion-content>

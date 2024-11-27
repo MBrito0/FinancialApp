@@ -25,3 +25,8 @@
 #container a {
   text-decoration: none;
 }
+
+ion-tab-button.tab-selected {
+  --color: #1183fea3; /* Cor do texto ativo */
+  --background: rgba(17, 131, 254, 0.1); /* Fundo da aba ativa */
+}

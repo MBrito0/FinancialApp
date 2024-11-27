@@ -1,20 +1,49 @@
-.support-content {
-    padding: 16px;
-    background-color: #f9f9f9; /* Cor de fundo clara */
+
+ion-list {
+  margin: 10px 15px 10px 15px;
+
+  ion-item {
+    --background: #ffffff; /* Fundo branco para os itens */
+    border: 1px solid #a0a4aa; /* Borda sutil cinza */
+    border-radius: 8px;
+    margin-bottom: 12px; /* Espaço entre os itens */
+    padding: 12px 16px; /* Melhor espaçamento interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); /* Sombra leve */
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra mais forte ao passar o mouse */
+      transform: scale(1.02); /* Pequeno aumento no tamanho */
+    }
+
+    ion-label {
+      color: #495057; /* Cor neutra e legível */
+      font-size: 15px; /* Tamanho legível */
+      font-weight: 500;
+    }
   }
-  
-  .support-button {
-    background-color: #3880ff; /* Cor do botão */
-    color: white;
-    transition: background-color 0.3s ease; /* Transição suave */
+}
+
+.support-button {
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+
+  &:hover {
+    background-color: #007aff; /* Cor mais escura ao passar o mouse */
+    transform: scale(1.04); /* Leve aumento */
   }
-  
-  .support-button:hover {
-    background-color: #007aff; /* Cor ao passar o mouse */
+
+  &:active {
+    background-color: #007aff; /* Cor mais escura ao clicar */
+    transform: scale(0.98); /* Redução ao pressionar */
   }
-  
-  ion-list {
-    --ion-item-background: transparent; /* Fundo transparente para o item */
-    --ion-item-border-color: #e0e0e0; /* Cor da borda */
+}
+
+ion-header {
+  --background: #007aff; /* Cabeçalho com azul vibrante */
+  ion-title {
+    color: #495057; /* Cor branca para o título */
   }
-  
+}

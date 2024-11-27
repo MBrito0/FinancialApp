@@ -1,27 +1,45 @@
 .settings-content {
-    padding: 16px;
-    background-color: #f0f0f0; /* Cor de fundo clara */
+  padding: 16px;
+  background-color: #f0f0f0; /* Cor de fundo clara */
+}
+
+.settings-description {
+  font-size: 14px;
+  color: #555; /* Cor do texto da descrição */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+ion-list {
+  margin-top: 10px;
+
+  ion-item {
+    --background: #ffffff; /* Fundo branco para os itens */
+    border: 1px solid #ced4da; /* Borda sutil */
+    border-radius: 8px; /* Bordas arredondadas */
+    margin-bottom: 10px; /* Espaço entre os itens */
+
+    ion-label {
+      color: #495057; /* Cor do texto do rótulo */
+    }
   }
-  
-  .settings-description {
-    font-size: 14px;
-    color: #555; /* Cor do texto da descrição */
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .action-button {
-    background-color: #3880ff; /* Cor do botão de ação */
-    color: white;
-  }
-  
-  .action-button:hover {
+}
+
+.action-button {
+  background-color: #3880ff; /* Cor do botão de ação */
+  color: white;
+
+  &:hover {
     background-color: #007aff; /* Cor ao passar o mouse */
   }
-  
-  .save-button {
-    margin-top: 20px; /* Espaço superior no botão */
-    background-color: #10dc60; /* Cor do botão de salvar */
-    color: white;
+}
+
+.save-button {
+  margin-top: 20px; /* Espaço superior no botão */
+  background-color: #10dc60; /* Cor do botão de salvar */
+  color: white;
+
+  &:hover {
+    background-color: #0abf5e; /* Cor ao passar o mouse */
   }
-  
+}

@@ -1,0 +1,76 @@
+ion-toolbar {
+  --background: #115bda; // Cor de fundo da toolbar (header)
+  --color: white; // Cor do título no header
+}
+
+ion-content {
+  background-color: #ccc; // Cor de fundo suave para o conteúdo
+  padding: 20px;
+}
+
+ion-list {
+  margin-bottom: 10px;
+  // background-color: #d0d2d2;
+}
+
+ion-item {
+  --background: #d8dbdbc9; /* Fundo branco para os itens */
+  border: 1px solid #cecdcd; /* Borda sutil */
+  border-radius: 5px; /* Bordas arredondadas */
+  margin: 10px 20px 10px 20px; /* Espaço entre os itens */
+}
+
+ion-button {
+  --background: #0b67e7; // Cor do botão verde
+  --color: white; // Cor do texto do botão
+  --border-radius: 10px; // Borda arredondada
+  font-weight: 600;
+  padding: 12px;
+  transition: background-color 0.3s;
+
+  &:hover {
+    --background: #337fe2; // Cor verde mais escura no hover
+  }
+
+  &[color="danger"] {
+    --background: #f44336; // Cor vermelha para o botão de excluir
+    --color: white;
+
+    &:hover {
+      --background: #e53935; // Cor vermelha mais escura no hover
+    }
+  }
+}
+
+ion-select {
+  --padding-start: 10px;
+  --padding-end: 10px;
+  padding-bottom: 5px;
+  background-color: #fafafab9;
+  border-radius: 6px;
+  margin: 8px 0 8px 0;
+  border: 1px solid #ccc;
+}
+
+ion-select:focus {
+  border-color: #4CAF50;
+}
+
+ion-label h2 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #333;
+  margin: 5px 0;
+}
+
+ion-label p {
+  font-size: 1rem;
+  color: #666;
+  margin: 3px 0;
+}
+
+ion-item ion-button {
+  font-size: 0.9rem;
+  padding: 10px;
+}
+
